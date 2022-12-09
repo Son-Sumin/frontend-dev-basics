@@ -7,6 +7,7 @@
 .header {
 	width: 630px;
 	height: 100px;
+	background-color: #add;
 	margin: 50px auto;
 }
 
@@ -15,14 +16,42 @@
 	width: 222px;
     height: 52px;
     background: url('/ch03/images/nhead.png') no-repeat 0 -158px / 442px 428px;;
+}
 
+.search-box {
+	width: 390px;
+	height: 50px;
+	border: 3px solid #19ce60;
+	background-color: #fff;
+	float: right;
+}
+
+.search-box input, .search-box a {
+	display:block;
+	float: right 2px;
+}
+
+.search-box input {
+	border: none;
+	outline: none;
+}
+
+.btn-search {
+	float: right 2px;
 }
 </style>
 </head>
+
 <body>
 	<div class="header">
 		<h1 class="logo">네이버</h1>
-		<div class="search-bar">
+		<div class="search-box">
+			<input type="text">
+			<div class="btn-search">
+				<button>돋보기</button>
+			</div>
+			<a href="#" id="dropdown">드롭다운</a>
+			<a href="#" id="keyboard">키보드</a>
 		</div>
 	</div>
 </body>
