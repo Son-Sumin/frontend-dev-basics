@@ -1,76 +1,80 @@
 ﻿<!DOCTYPE HTML>
 <html>
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-	<title>마진과 패딩</title>
-	<style type="text/css">
-		* { margin:0; padding:0 }
-		body {
-			font-family: "돋움", "맑은 고딕";
-			font-size: 0.8em;
-			color: #333;
-		}
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>마진과 패딩</title>
+<!--  *(전체선택자) ; 모든 엘리먼트
+	  #000 ; 아이디000 내부의 모든 엘리먼트
+	  .ooo ; 클래스ooo 내부의 모든 엘리먼트 -->
+<style type="text/css">
+	* { margin:0; padding:0 }
+	 
+	body {
+		font-family: "돋움", "맑은 고딕";
+		font-size: 0.8em;
+		color: #333;
+	}
+	
+	.box1 {
+		border: 1px solid #666;
+		width: 300px;
+		background-color: #FFC;
+		cursor: pointer;
 		
-		.box1 {
-			border: 1px solid #666;
-			width: 300px;
-			background-color: #FFC;
-			cursor: pointer;
-			
-			padding-top:10px;
-			padding-right:20px;
-			padding-bottom:30px;
-			padding-left:40px;
-			
-			padding: 10px 20px 30px 40px;  /* top right bottom left */
-			padding: 10px 20px 30px;  /* top (R L) bottom */
-			padding: 10px 20px;  /* (T B) (R L) */
-			padding: 10px;  /* TBRL */
-			
-			margin-top:10px; /* 음수도 가능 */
-			margin-right:20px;
-			margin-bottom:30px;
-			margin-left:40px;
-			
-			margin: 10px 20px 30px 40px;  /* top right bottom left */
-			margin: 10px 20px 30px;  /* top (R L) bottom */
-			margin: 10px 20px;  /* (T B) (R L) */
-			margin: 10px;  /* TBRL */
-			
-			/* center align */
-			/* vertical 불가 */
-			margin-left: auto;
-			margin-right: auto;			
-		}
-	</style>
-	<script> /* ; 안 써도 됨 */ /* JS는 함수 자체가 객체이다 */
-		function onClicked() {  /* 시간단위로 움직이게 하기 */ /* setTimeout; 일회성 */
+		padding-top:10px;
+		padding-right:20px;
+		padding-bottom:30px;
+		padding-left:40px;
 		
-			intervalId = setInterval(function() {
-				
-			elDiv = document.getElementById("my-div");
-			elDiv.style.backgroundColor = "#ff0";
-			marginTop = parseInt(elDiv.style.marginTop);  /* 계산하기 위해 parseInt  */
-			marginTop -= 10;
+		padding: 10px 20px 30px 40px;  /* top right bottom left */
+		padding: 10px 20px 30px;  /* top (R L) bottom */
+		padding: 10px 20px;  /* (T B) (R L) */
+		padding: 10px;  /* TBRL */
+		
+		margin-top:10px; /* 음수도 가능 */
+		margin-right:20px;
+		margin-bottom:30px;
+		margin-left:40px;
+		
+		margin: 10px 20px 30px 40px;  /* top right bottom left */
+		margin: 10px 20px 30px;  /* top (R L) bottom */
+		margin: 10px 20px;  /* (T B) (R L) */
+		margin: 10px;  /* TBRL */
+		
+		/* center align */
+		/* vertical 불가 */
+		margin-left: auto;
+		margin-right: auto;	
+		
+	}
+</style>
+<script> /* ; 안 써도 됨 */ /* JS는 함수 자체가 객체이다 */
+	function onClicked() {  /* 시간단위로 움직이게 하기 */ /* setTimeout; 일회성 */
+	
+		intervalId = setInterval(function() {
 			
-			if(marginTop == -80) {
-				clearInterval(intervalId);
-				return;
-			}
-			
-			elDiv.style.marginTop = marginTop + "px";
-			console.log(marginTop);
-			}, 20);  /* 함수, 밀리세크*/
+		elDiv = document.getElementById("my-div");
+		elDiv.style.backgroundColor = "#ff0";
+		marginTop = parseInt(elDiv.style.marginTop);  /* 계산하기 위해 parseInt  */
+		
+		if(marginTop == -80) {
+			clearInterval(intervalId);
+			return;
 		}
+		marginTop -= 10;   /* if문 위에 넣으면 -70까지 출력 후 리턴  */
+		elDiv.style.marginTop = marginTop + "px";  /* px을 붙여야 픽셀임을 인식하고 출력됨  */
+		console.log(marginTop);
+		}, 20);  /* 함수, 밀리세크*/
+	}
 
-		console.log("some codes");
-		
-		
-		function mouseover() {
-			console.log("mouse over");
-		}
-	</script>
+	console.log("some codes");
+	
+	function mouseover() {
+		console.log("mouse over");
+	}
+</script>
 </head>
+
 <body>
 	<div id="my-div" class='box1' style="margin-top:200px;" onclick='onClicked()' onmouseover="mouseover()">
 		CSS에서 가장 보편적이고 많이 사용하는 마진과 패딩에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.

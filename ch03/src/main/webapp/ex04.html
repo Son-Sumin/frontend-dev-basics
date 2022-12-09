@@ -3,19 +3,20 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Border</title>
+<!-- width, style, color -->
 <style type="text/css">
 	body {
 		font-family: "돋움", "맑은 고딕";
 		font-size: 0.8em;
 		color: #333;	
-		margin:0;
-		padding:0; 
+		margin: 0;
+		padding: 0; 
 	}
 	/* 그룹선택자 사용 */
 	.box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9  {
-		margin:10px;
-		padding:10px;
-		width:300px;
+		margin: 10px;
+		padding: 10px;
+		width: 300px;
 		background-color: #FFC;
 	}
 	.box1 {
@@ -31,16 +32,14 @@
 		border:4px groove;
 	}
 	.box5 {
-		border:4px  inset;
+		border:4px inset;
 	}
 	.box6 {
 		border:4px outset;
-	}
-	
+	}	
 	.box7 {
 		border: 4px ridge;
-	}
-	
+	}	
 	.box8 {
 		border: 1px solid;
 		
@@ -53,19 +52,17 @@
 		border-width: 1px 2px 3px 4px;  /* T R B L */
 		border-width: 1px 2px 3px;      /* T (R L) B */
 		border-width: 1px 2px;          /* (T B) (R L) */
-		border-width: 1px;              /* (T R B L ) */
+		border-width: 1px;              /* (T R B L) */
 		
 		border-style: dashed dotted solid double;
 		border-color: red green blue black;
 		
 		/* 보통은 다음과 같은 방식 사용(4방향이 모두 width, style, color가 동일하다면..) */
 		border: 1px solid #111;
-	
 	}
 	.box9 {
 		border: 4px none;
 	}
-
 </style>
 </head>
 
@@ -114,6 +111,5 @@
 	[none]
 	CSS에서 가장 보편적이고 많이 사용하는 border에 대한 값이 어떻게 적용되는지 확인해 보겠습니다.
 	</div>
-
 </body>
 </html>
