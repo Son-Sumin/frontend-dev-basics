@@ -8,7 +8,7 @@
 	.header {
 		width: 630px;
 		height: 100px;
-		background-color: #add;
+		background-color: #acf;
 		margin: 50px auto;
 	}
 	
@@ -16,7 +16,7 @@
 		font-size: 0;
 		width: 222px;
 	    height: 52px;
-	    background: url('/ch03/images/nhead.png') no-repeat 0 -158px / 442px 428px;;
+	    background: url('/ch03/images/nhead.png') no-repeat 0 -158px / 442px 428px;
 	}
 	
 	.search-box {
@@ -28,8 +28,9 @@
 	}
 	
 	.search-box input, .search-box a {
-		display:block;
-		float: right 2px;
+		display: block;
+		float: right;
+		margin-right: 2px;
 	}
 	
 	.search-box input {
@@ -38,7 +39,32 @@
 	}
 	
 	.btn-search {
-		float: right 2px;
+		float: right;
+		margin-right: 2px;
+		width: 22px;
+		height: 22px;
+		background-position: -420px -24px;
+		background-repeat: no-repeat;
+	}
+	
+	#dropdown {
+		background: url('/ch03/images/nhead.png');
+		width: 10px;
+		height: 5px;
+		background-position: -158px -151px;
+		background-repeat: no-repeat;
+		vertical-align: top;
+	}
+	#keyboard {
+		background: url('/ch03/images/nhead.png');
+		display: inline-block;
+		width: 20px;
+		height: 12px;
+		background-position: -398px -267px;
+		background-repeat: no-repeat;
+		margin: -6px 0 0 -10px;
+		float: right;
+		margin-right: 2px;
 	}
 </style>
 </head>
@@ -46,6 +72,7 @@
 <body>
 	<div class="header">
 		<h1 class="logo">네이버</h1>
+		
 		<div class="search-box">
 			<input type="text">
 			<div class="btn-search">
