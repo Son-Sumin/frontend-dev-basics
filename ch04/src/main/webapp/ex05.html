@@ -13,7 +13,7 @@ p {
 }
 
 p.text1 {
-	text-indent: 15px;	
+	text-indent: 15px;	 /* text-indent; 문단 들여쓰기 */
 }
 
 p.text1 .under {
@@ -40,22 +40,25 @@ p.cap {
 
 p.up {
 	text-transform: uppercase;  /* 다 대문자로 */
-	letter-spacing: 0px;
+	letter-spacing: -1px;
 }
 
 p.word_space {
-	word-spacing: 10px;
+	word-spacing: 5px;
 }
 
 /* ellipsis(...) */
+/* Block레벨 태그에서만 적용됨 */
+/* tr에서 가능 */
 p.text3 {
 	height: 20px;
 	border: 1px solid #999;
 	
 	width: 100px;             /* 1. 텍스트를 가지고 있는 엘리먼트의 너비*/
-	overflow-x: hidden;       /* 2. 글자 길이가 너비를 넘어가는 경우 보이지 않게 처리 */
-	text-overflow: ellipsis;  /* 3. 글자 길이가 너비를 넘어가는 경우 ... 처리 */
-	white-space: nowrap;      /* 4. 줄바꿈 금지: 한 줄로만 나오게 처리 */
+	white-space: nowrap;      /* 2. 줄바꿈 금지: 한 줄로만 나오게 처리 */
+	overflow-x: hidden;       /* 3. 글자 길이가 너비를 넘어가는 경우 보이지 않게 처리 */
+	text-overflow: ellipsis;  /* 4. 글자 길이가 너비를 넘어가는 경우 ... 처리 */
+	
 }
 
 p.text3:hover {
