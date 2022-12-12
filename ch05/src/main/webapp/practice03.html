@@ -36,7 +36,7 @@ input[type="image"] {
 		<label class="legend">패스워드</label>
 		<input name="passwprd" type="password">
 
-		<fieldset>
+		<fieldset> <!-- <fieldset>에 대한 설명은 자신이 포함한 첫 번째 <legend> 요소가 담당 -->
 			<legend>생년월일</legend>
 			
 			<select>
@@ -77,3 +77,20 @@ input[type="image"] {
 	</form>
 </body>
 </html>
+
+<!-- 
+# display; 요소의 종류를 선택하는 속성
+
+# display: inline / block / inline-block / none
+ * display: inline 
+  - 요소를 inline 요소처럼, 즉 앞뒤로 줄바꿈 X
+  
+ * display: block 
+  - 요소를 block 요소처럼, 즉 앞뒤로 줄바꿈 O
+
+ * display: inline-block
+  - 요소는 inline, 내부는block 처럼, 즉 블록이 inline처럼 줄바꿈 없이 옆으로 출력
+
+ * display: none
+  - 공간이 사라지고 안에 있던 텍스트만 출력
+ -->
