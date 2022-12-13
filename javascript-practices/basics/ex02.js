@@ -13,13 +13,13 @@
 - object
 java script에 클래스는 없음, 클래스를 생성해주는 문법이 있음
     1. new 생성자함수() 사용해서 생성
-        Number() => object 타입 객체
-        String() => object 타입 객체
-        Boolean() => object 타입 객체
-        Object() => object 타입 객체
-        Array() => object 타입 객체
-        Date() => object 타입 객체
-        RegExp() => object 타입 객체
+        Number()   => object 타입 객체
+        String()   => object 타입 객체
+        Boolean()  => object 타입 객체
+        Object()   => object 타입 객체
+        Array()    => object 타입 객체
+        Date()     => object 타입 객체
+        RegExp()   => object 타입 객체
         Function() => function 타입 객체!!!!!!!!!!!!!
 
     2. {} 객체 리터럴, JavaScript Object Notation(JASON)
@@ -93,10 +93,6 @@ function f1(a, b) {
     return a + b;
 }
 
-var a = 10;
-var b = false;
-var o = {};
-var a = [];
 var f2 = function(a, b) {
     return a + b;
 }
@@ -109,3 +105,10 @@ console.log("f1 : " + typeof(f1) + " : " + (f1 instanceof(Function)));
 console.log("f2 : " + typeof(f2) + " : " + (f2 instanceof(Function)));
 console.log("f3 : " + typeof(f3) + " : " + (f3 instanceof(Function)));
 
+
+// 원시타입에 메소드가 호출될 때
+// 임시 Wrapper 객체가 만들어져서 메소드 호출이 일어난 뒤 사라진다. : 유사객체
+console.log("=====원시 타입도 메소드 호출이 가능하다.=====================");
+
+console.log(b.valueOf());   // new Boolean(b).valueOf()
+console.log(b2.valueOf());  // b2; 원래 객체
