@@ -1,8 +1,9 @@
 /* 
-변수와 자료형(Date Type)
+<< 변수와 자료형(Date Type) >>
    기본타입과 객체로 이루어져 있다고 생각하자
 
-[기본타입(Primitive Type)]  ≒ 유사객체 ; 기본타입이지만 객체처럼 메소드 호출 가능
+[기본타입(Primitive Type)] ≒ 유사객체 ; 기본타입이지만 객체처럼 메소드 호출 가능
+        ; 기본타입 변수가 메소드 호출 시 내부적으로 잠깐 객체화, 출력 후 기본타입 변수로
 - undefined
 - number (실수와 정수 구분 X)
 - string
@@ -10,9 +11,41 @@
 
 [객체] ; 기본타입이 아닌 타입들은 모두 객체라고 부른다.
 - object
-- function
+java script에 클래스는 없음, 클래스를 생성해주는 문법이 있음
+    1. new 생성자함수() 사용해서 생성
+        Number() => object 타입 객체
+        String() => object 타입 객체
+        Boolean() => object 타입 객체
+        Object() => object 타입 객체
+        Array() => object 타입 객체
+        Date() => object 타입 객체
+        RegExp() => object 타입 객체
+        Function() => function 타입 객체!!!!!!!!!!!!!
 
+    2. {} 객체 리터럴, JavaScript Object Notation(JASON)
+    3. [] 배열 리터럴
+    4. null
+
+- function
+    1. function f() {......}
+    2. var f =  function() {......}   추천!!!
+    3. var f = new Function(......)
 */
+
+/*
+student1 = student2
+
+student1 = new Object();
+student.name = "둘리";
+student.grade = 1;
+
+student2 = {
+    name: "둘리",
+    grade: 1
+} */
+
+
+console.log("=====기본타입(undefined, number, string, boolean)=====");
 
 // u;    // 에러  ; 표현식으로 인식
 var u;   // 변수 선언하는 구문
@@ -28,4 +61,51 @@ console.log(i + " : " + typeof(i));
 console.log(s + " : " + typeof(s));
 console.log(b + " : " + typeof(b));
 
-console.log(s.toUpperCase());
+
+console.log("=====객체타입(object)=======================");
+
+var i2 = new Number(10);
+var s2 = new String("Hello World");
+var b2 = new Boolean(true);
+var o = new Object();
+var a = new Array();
+var d = new Date();
+var o2 = {};
+var a2 = [];
+var n = null;
+
+console.log(i2 + " : " + typeof(i2) + " : " + (i2 instanceof(Number)));
+console.log(s2 + " : " + typeof(s2) + " : " + (s2 instanceof(String)));
+console.log(b2 + " : " + typeof(b2) + " : " + (b2 instanceof(Boolean)));
+console.log(o  + " : " + typeof(o)  + " : " + (o instanceof(Object)));
+console.log(a  + " : " + typeof(a)  + " : " + (a instanceof(Array)));
+console.log(d  + " : " + typeof(d)  + " : " + (d instanceof(Date)));
+console.log(o2 + " : " + typeof(o2) + " : " + (o2 instanceof(Object)));
+console.log(a2 + " : " + typeof(a2) + " : " + (a2 instanceof(Array)));
+console.log(n  + " : " + typeof(n)  + " : " + (n instanceof(Object)));
+
+// instanceof() ; 생성자 함수 타입 판별
+
+
+console.log("=====객체타입(function)=====================");
+
+function f1(a, b) {
+    return a + b;
+}
+
+var a = 10;
+var b = false;
+var o = {};
+var a = [];
+var f2 = function(a, b) {
+    return a + b;
+}
+
+var f3 = new Function("a", "b", "return a+b;");
+
+console.log(f1(10, 20), f2(1,2), f3(100, 200));
+
+console.log("f1 : " + typeof(f1) + " : " + (f1 instanceof(Function)));
+console.log("f2 : " + typeof(f2) + " : " + (f2 instanceof(Function)));
+console.log("f3 : " + typeof(f3) + " : " + (f3 instanceof(Function)));
+
