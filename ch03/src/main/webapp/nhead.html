@@ -11,7 +11,8 @@
 		width: 630px;
 		height: 56px;
 		margin: 50px auto;
-		background-color: #333;
+		border-radius: 2px;
+		background-color: #ccc;
 	}
 	
 	.logo {
@@ -19,6 +20,7 @@
 		width: 222px;
 	    height: 52px;
 	    background: url('/ch03/images/nhead.png') no-repeat 0 -158px / 442px 428px;
+	    float: left;
 	}
 	
 	.search-box {
@@ -31,11 +33,16 @@
 	
 	.search-box input, .search-box a {
 		display: block;
-		float: right;
-		margin-right: 2px;
 	}
 	
 	.search-box input {
+	    padding: 13px 15px;
+	    margin: 1px;
+	    background-color: #fff;
+	    font-size: 18px;
+	    line-height: 24px;
+	    color: #000;
+	    font-weight: 700;
 		border: none;
 		outline: none;
 	}
@@ -44,7 +51,8 @@
 		width: 56px;
 		height: 50px;
 		border: 3px solid #19ce60;
-		background: #19ce60 url('/ch03/images/nhead.png');
+		background-color: #19ce60;
+		background-image: url('/ch03/images/nhead.png');
 		background-position: -420px -24px;
    		background-repeat: no-repeat;
 		float: right;
@@ -56,20 +64,23 @@
 	}
 	
 	#dropdown {
-		background: url('/ch03/images/nhead.png');
+		background-image: url('/ch03/images/nhead.png');
 		background-position: -158px -151px;
    		background-repeat: no-repeat;
 		width: 10px;
 		height: 5px;
+		float: right;
+		margin-right: 2px;
 	}
 	
 	#keyboard {
-		background: url('/ch03/images/nhead.png');
+		background-image: url('/ch03/images/nhead.png');
 		background-position: -398px -267px;
    		background-repeat: no-repeat;
 		width: 20px;
 		height: 12px;
 		margin: -6px 0 0 -10px;
+		background-size: 442px 428px;
 		float: right;
 		margin-right: 2px;
 	}
