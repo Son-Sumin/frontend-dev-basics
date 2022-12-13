@@ -22,14 +22,18 @@ java script에 클래스는 없음, 클래스를 생성해주는 문법이 있�
         RegExp()   => object 타입 객체
         Function() => function 타입 객체!!!!!!!!!!!!!
 
-    2. {} 객체 리터럴, JavaScript Object Notation(JASON)
-    3. [] 배열 리터럴
+    2. {} 객체 리터럴, JavaScript Object Notation(JSON)
+        var obj = {first: "o", second: "b", third: "j"};
+        console.log(obj.first);
+    3. [] 배열 리터럴  
+        var arrayArray = [1,2,3];
+        console.log(arrayArray[0]);
     4. null
 
 - function
     1. function f() {......}
     2. var f =  function() {......}   추천!!!
-    3. var f = new Function(......)
+    3. var f = new Function("변수1", "변수2", ..., "리턴")
 */
 
 /*
@@ -106,9 +110,9 @@ console.log("f2 : " + typeof(f2) + " : " + (f2 instanceof(Function)));
 console.log("f3 : " + typeof(f3) + " : " + (f3 instanceof(Function)));
 
 
+console.log("=====원시 타입도 메소드 호출이 가능하다.=====================");
 // 원시타입에 메소드가 호출될 때
 // 임시 Wrapper 객체가 만들어져서 메소드 호출이 일어난 뒤 사라진다. : 유사객체
-console.log("=====원시 타입도 메소드 호출이 가능하다.=====================");
 
 console.log(b.valueOf());   // new Boolean(b).valueOf()
 console.log(b2.valueOf());  // b2; 원래 객체
