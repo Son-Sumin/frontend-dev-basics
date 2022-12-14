@@ -1,5 +1,10 @@
 /*
 Array 객체 함수: Array.prototype.*
+
+  => concat, pop, push, join, reverse, shift, slice, splice
+    - 기준 Array 변경 X : slice
+    - 기준 Array 변경 O : pop, push, reverse, shift, splice
+    - 해당 없음 : concat, join
 */
 
 var colors = ['black', 'white', 'yellow'];
@@ -7,7 +12,7 @@ var fruits = ['apple', 'mango', 'banana'];
 
 // concat
 console.log("========concat==========");
-var a1 = fruits.concat(colors);
+var a1 = fruits.concat(colors);    // fruits + colors
 console.log(a1);
 
 // pop, push: stack 지원 함수
@@ -29,13 +34,13 @@ console.log(fruits);
 fruits.reverse();
 console.log(fruits);
 
-// shift ; 맨 앞 요소 튕겨나감
+// shift ; 맨 앞 요소 튕겨나가서 빠짐
 console.log("========shift==========");
 var numbers1 = [1000, 3000, 2000, 5000, 4000, 8000];
 var number = numbers1.shift();
 console.log(number, numbers1);
 
-// slice
+// slice ; 해당 index만 확인, 기준 Array 변경 없음
 console.log("========slice==========");
 var numbers2 = numbers1.slice(1, 3);  // index 1이상 3미만
 console.log(numbers1, numbers2);

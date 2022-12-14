@@ -17,7 +17,7 @@ a2[5] = 5;
 a2[10] = 10;  
 // 위 var a2 = new Array(10); 에 의해 0~9까지 있지만, 에러X a2[10] = 10;하면 알아서 늘려줌
 console.log(a2, a2.length);
-// 배열 요소를 값이나 객체를 대입하지 않으면 undefined, not error
+// 배열 요소를 값이나 객체를 대입하지 않으면 undefined, 에러X
 console.log(a2[1], a2[6]);
 
 // 생성 함수의 파라미터가 2개 이상인 경우: 초기값 지정
@@ -41,7 +41,7 @@ var a5 = [10, "JavaScript", true, undefined, {
 }];  //  블럭 만나면 개행!!
 
 // 순회
-// var i는 함수스콥 관련된 것
+// var i는 함수스콥 관련된 것, const는 불가 i가 가변적(증가)이므로
 for(let i = 0; i < a5.length; i++) {
     console.log(a5[i]);
 }
@@ -53,7 +53,7 @@ a5[5]();
 // Array vs. Object
 // Object; Object.prototype.* 만 가능
 // Array; Object.prototype.* + Array.prototype.* 사용 가능
-// 대표적인 메소드 예시; length
+// 대표적인 Array.prototype만 해당하는 메소드 Array.length
 console.log("======Array vs. Object======");
 a6 = [];
 a6[0] = 0;
@@ -61,7 +61,8 @@ a6['1'] = 1;
 a6.name = "둘리";
 a6["age"] = 10;
 console.log(a6['0'], a6[1], a6['name'], a6.age, "length:" + a6.length);
-// length는 index로 int만 취급, '1'은 형전환하여 int1 인식 -> length의 attribute(내부 자체 설정)
+// length는 index로 int만 취급     -> a6.length = 2
+// string'1'은 형전환하여 int1 인식 -> length의 attribute(내부 자체 설정)
 
 for(prop in a6) {
     console.log(typeof(prop));
@@ -75,6 +76,7 @@ o6['1'] = 1;
 o6.name = "둘리";
 o6["age"] = 10;
 console.log(o6['0'], o6[1], o6['name'], o6.age, "length:" + o6.length);
+// length는 Object.prototype.*에 포함되지 않음  -> o6.length = undefined
 
 for(prop in o6) {
     console.log(typeof(prop));

@@ -8,7 +8,7 @@ var myFunction = function() {
     console.log("일반함수");
 }
 
-myFunction();   // 호출해서 사용
+ myFunction();   // 호출해서 사용
 
 
 // 2. 생성자 함수

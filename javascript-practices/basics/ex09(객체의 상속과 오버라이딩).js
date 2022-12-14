@@ -1,4 +1,4 @@
-/*
+/* ★★★
 자바스크립트 객체 IV : prototype 기반의 상속과 오버라이딩: 자바스크립트 객체 지향 프로그래밍
             - prototype과 constructor는 서로 referencing 한다.
             - new XX() -> constructor <-> prototype <-> prototype  ...
