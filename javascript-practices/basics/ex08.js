@@ -21,15 +21,14 @@ o.another = {
         console.log(this.name + " : " + this.age);
     }
 }
-console.log("111" + o);
+console.log(o);
 o.another.print();
-console.log("222" + o);
 
 f.another = {
     name: "마이콜",
     age: 20
 }
-console.log("함수 확장 : " + f);
+console.log(f);
 
 
 console.log("===기본타입[primitive type]은 확장되지 않는다.=======");
