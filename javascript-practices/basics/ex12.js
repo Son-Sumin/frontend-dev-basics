@@ -16,7 +16,7 @@ Array.prototype.insert = function(index, value) {
         // for(let i = 0; i < value.length; i++) {
         //     this.splice(index+i, 0, value[i]);
         // }
-        console.log("this: " + this);
+        console.log("this: " + this);  // this: 1,2,4  ; string으로 풀려서 출력
 
         // 오류!!
         // 콜백함수 안의 this는 어휘 상의 this와 일치하지 않는다.
