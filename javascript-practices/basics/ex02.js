@@ -4,7 +4,7 @@
 
 [기본타입(Primitive Type)] ≒ 유사객체 ; 기본타입이지만 객체처럼 메소드 호출 가능
         ; 기본타입 변수가 메소드 호출 시 내부적으로 잠깐 객체화, 출력 후 기본타입 변수로
-- undefined
+- undefined (아예 대입X)
 - number (실수와 정수 구분 X)
 - string
 - boolean
@@ -22,13 +22,16 @@ java script에 클래스는 없음, 클래스를 생성해주는 문법이 있�
         RegExp()   => object 타입 객체
         Function() => function 타입 객체!!!!!!!!!!!!!
 
-    2. {} 객체 리터럴, JavaScript Object Notation(JSON)
+    2. {} 객체 리터럴, JavaScript Object Notation(JSON)   => new Object()
         var obj = {first: "o", second: "b", third: "j"};
         console.log(obj.first);
-    3. [] 배열 리터럴  
+    
+    3. [] 배열 리터럴   => new Array()
         var arrayArray = [1,2,3];
         console.log(arrayArray[0]);
-    4. null
+
+    4. null (객체 없음, 'null' 대입)
+
 
 - function
     1. function f() {......}

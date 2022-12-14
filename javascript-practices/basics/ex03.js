@@ -1,5 +1,8 @@
 /* null과 undefined */
 
+// null; (객체) 객체가 없다
+// undefined; (기본타입) 아무 값도 대입하지 않았다
+
 var myVar1 = undefined;   // 명시적으로 undefined 대입
 var myVar2;               // 암시적으로 undefined 대입
 var myVar3 = null;
