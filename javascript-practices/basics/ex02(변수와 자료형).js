@@ -51,6 +51,21 @@ student2 = {
     grade: 1
 } */
 
+/*
+자바스트립트 객체를 분류하는 또 다른 방법
+1. 내장 객체 : 
+   - JavaScript Engine 내부에 미리 내장되어 있는 객체
+   - Number, Boolean, Date, RegExp, Array, Object, ... : 생성자 함수
+   - parseInt, setTimeout, setInterval, ... : 일반 함수
+   
+2. 호스트 객체 : 
+   - JavaScript Engine이 embedded 되어 있는 환경에 있는 객체
+   - Browser가 호스트인 경우: screen(크기 등 화면 자체 조작), location*(주소창), navigator*(브라우저 정보,), DOM***(화면 구성하는 contents), XmlHttpRequeest***, ...
+   - Node가 호스트인 경우: http, os, fs(file io), path(파일 정보; 저장할 공간, 처리 방법 등)), process, ...
+   
+3. 사용자 객체
+   - 자바스크립트 엔진이 실행되면서 생성되는 객체들
+*/
 
 console.log("=====기본타입(undefined, number, string, boolean)=====");
 
