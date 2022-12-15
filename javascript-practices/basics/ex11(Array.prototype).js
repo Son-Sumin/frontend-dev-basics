@@ -70,4 +70,4 @@ var a1 = [0,1,2,3,4];
 a1.splice(1,0,10);      // a1.insertAt(1, 10)  ->  ex12.js 확인
 console.log(a1);
 
-// forEach
+// forEach, filter, map, reduce
