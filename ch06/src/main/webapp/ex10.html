@@ -10,14 +10,15 @@
 		var header02 = document.getElementById("header-02");
 		
 		//2. Tag Name
-		// id는 중복되면 맨 처음 것이 나오지만 tag는 중복되면 어쩔 수 없음. 배열 출력됨.
+		// id는 중복되면 마지막 것이 나오지만 tag는 중복되면 어쩔 수 없음. 다 나오게 되면서 배열 출력됨.
 		var h4s = document.getElementsByTagName("h4");
 		
 		//3. Class Name
-		
+		var h5s = document.getElementsByClassName("header");
 		
 		//4. CSS Selector(선택)
-		
+		var header07 = document.querySelector("#header-07");  // id       // 1개
+		var h6s = document.querySelectorAll(".header2");      // class    // 해당 이름 전부
 		
 		setTimeout(function(){
 			header01.innerText += ' by getElementById()';
@@ -25,6 +26,14 @@
 			
 			h4s[0].innerText += ' by getElementsByTagName()';
 			h4s[1].innerText += ' by getElementsByTagName()';
+			
+			h5s[0].innerText += ' by getElementsByClassName()';
+			h5s[1].innerText += ' by getElementsByClassName()';
+			
+			header07.innerText += ' by querySelector()';
+			
+			h6s[0].innerText += ' by querySelectorAll()';
+			h6s[1].innerText += ' by querySelectorAll()'; 
 			
 		}, 2000);
 	}

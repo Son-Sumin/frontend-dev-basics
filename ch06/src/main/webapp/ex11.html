@@ -3,11 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script>
+/* 
+[DOM Event 종류]
+  * Official event name은 소문자로
+1. 마우스
+	- mouseover, mouseout
+	- mousedown -> mouseup -> click
+	- mousedown -> mouseup -> click --100ms-- mousedown -> mouseup -> click -> dblclick
+2. 키보드
+	- keydown -> kepup -> keypress
+3. form
+	- submit 
+	  (UX를 위해 client쪽에서 데이터 검열, 보안을 위해 server쪽에서 입력값 validation)
+4. input
+	- focus(input창이 입력을 기다릴 때),
+	  blur(focus를 잃음),
+	  change(input창이 focus를 받아 해당 창만 색 등이 바뀔 때)
+5. touch (모바일용)
+
+
+[DOM Event 용어 정리]
+1. Event Name
+	load, click, mousedown, submit, blur, ...
+	
+2. Event Attribute
+	DOM Event Model Lv0
+	onload, onclick, onmouse, onsubmit
+
+3. Event Listener
+	DOM Event Model Lv2
+	callback function
+	
+4. DOM Event Model
+	- DOM HTML Element의 Event Handler를 설정하는 방법에 대한 표준
+	- DOM Event Model Lv0
+	  1) inline
+	  	- 태그 안에 Event Attribute(예시 onclick)에 자바스크립트 코드를 설정하는 방식
+	  	-  예시: <h1 onclick="자바스크립트 코드" ... >
+	  	- 웹 표준 위배
+	  2) basic
+	  	- 고전적인 이벤트 처리 방식(기본 이벤트 처리 방식)
+	  	- element.onclick = function(){....}
+	  	- 문제점은 이벤트 핸들러를 하나만 등록할 수 있다.
+	  	
+	- DOM Event Model Lv2
+	  1) Observer 패턴을 적용해서 Listner(함수, 이벤트 핸들러)을 등록하는 방식 (상태가 바뀐다 -> 이벤트 실행)
+	  2) 다중 event handler를 등록할 수 있다.
+	  3) HTMLElement 객체가 등록/제거할 수 있는 함수(DOM API)를 제공하여야 한다.
+	  	- MSIE(<=8): attachEvent / detachEvent
+	  	- 표준브라우저: addEventListener() / removeEventListener()
+	  
+*/
+
+window.addEventListener('load', function(){  // 이름, 함수 
+	document
+		.getElementById("header-2")
+		.onclick = function(){
+		console.log("Event Model Level0 - Basic");
+	}
+	
+	document
+		.getElementById("header-3")
+		.addEventListener('click', function(){
+		console.log("Event Model Level2");
+	});
+	
+});  
+</script>
 </head>
 <body>
 	<h1>DOM(Document Object Model)</h1>
 	<h2>5. Event 처리</h2>
-	<h3>Event Model Level0 - Inline</h3>
+	<h3 onclick='console.log("Event Model Level0 - Inline")'>Event Model Level0 - Inline</h3>
 	<h3 id='header-2'>Event Model Level0 - Basic</h3>
 	<h3 id='header-3'>Event Model Level2</h3>
 </body>

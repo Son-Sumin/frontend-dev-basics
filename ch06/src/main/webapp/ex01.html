@@ -14,8 +14,8 @@
 	
 	//2.
 	// 팝업창
-	setTimeout(function(){
-		var child = window.open("http://localhost:8080/ch06/popup.html", "popup", "width=600, height=400");  // html("popup.html"도 가능), 이름, 크기
+	setTimeout(function(){      // html("popup.html"도 가능), 이름, 크기
+		var child = window.open("http://localhost:8080/ch06/popup.html", "popup", "width=600, height=400");
 		setTimeout(function(){
 			// 자식 창의 내용 바꾸기
 			child.document.write("<h1>popup contents changed</h1>")
