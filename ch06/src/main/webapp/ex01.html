@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<!-- ./javascript-practices/basics/ex8.js 참고 -->
-	<!-- 전역함수들이 window의 속성이다 -->
-	<script>
-		window.n = "둘리";
-		console.log(window.n, n);
-	
-		var email = "kickscar@gmail.com";
-		console.log(window.email, email);
+<meta charset="UTF-8">
+<!-- ./javascript-practices/basics/ex8.js 참고 -->
+<!-- 전역함수들이 window의 속성이다 -->
+<script>
+	//1.
+	window.n = "둘리";
+	console.log(window.n, n);
 
-	</script>
+	var email = "kickscar@gmail.com";
+	console.log(window.email, email);
+	
+	//2.
+	// 팝업창
+	setTimeout(function(){
+		var child = window.open("http://localhost:8080/ch06/popup.html", "popup", "width=600, height=400");  // html("popup.html"도 가능), 이름, 크기
+		setTimeout(function(){
+			// 자식 창의 내용 바꾸기
+			child.document.write("<h1>popup contents changed</h1>")
+		}, 2000);
+		
+		setTimeout(function(){
+			// child(자식 창의 window 객체) 이동
+			child.moveTo(200,200);
+		}, 3000);
+	}, 2000);
+</script>
 </head>
+
 <body>
 <body>
 	<h1>BOM(Browser Object Model)</h1>
 	<h2>1. window 전역 객체(Global Object)</h2>
 	<ul>
-		<li>자바스크립트가 브라우저 창(window)을 제어하기 위한 객체</li>
-		<li>자바스크립트 실행과 관련된 환경 정보에 접근이 가능한 객체(Environments, Variable Object)</li>		
+		<li>1. 자바스크립트 실행과 관련된 환경 정보에 접근이 가능한 객체(Environments, Variable Object)</li>	
+		<li>2. 자바스크립트가 브라우저 창(window)을 제어하기 위한 객체</li>	
 	</ul>
 </body>
 </body>
-</html> 
+</html>
+
+<!-- 
+global
+- Environments -> Variable Object 가능
+- Environments <- Variable Object 불가
+
+window
+- Environments <-> Variable Object 가능
+ --> 

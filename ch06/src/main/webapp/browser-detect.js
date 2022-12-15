@@ -1,6 +1,7 @@
 var BrowserDetect = {
 		init: function () {
 			this.browser = this.searchString(this.dataBrowser) || "An unknown browser";
+			// this.searchString(this.dataBrowser)이 null / undefined 이면 "An unknown browser" 실행
 			this.version = this.searchVersion(navigator.userAgent)
 				|| this.searchVersion(navigator.appVersion)
 				|| "an unknown version";

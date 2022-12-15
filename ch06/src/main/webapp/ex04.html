@@ -3,7 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- browser-detect.js 참고 -->
+<script src="browser-detect.js"></script>  <!-- 무조건 이렇게 기재하기 -->
+<script>
+	// src="browser-detect.js" 적용 안 했을 때
+	//console.log(navigator.userAgent);
+	//console.log(navigator.platform);
+	BrowserDetect.init();
+	console.log(BrowserDetect.browser, BrowserDetect.version, BrowserDetect.OS);
+</script>
 </head>
+
 <body>
 	<h1>BOM(Browser Object Model)</h1>
 	<h2>4. navigator 객체</h2>
