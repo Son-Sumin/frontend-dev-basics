@@ -3,7 +3,8 @@
             - prototype과 constructor는 서로 referencing 한다.
             - new XX() -> constructor <-> prototype <-> prototype  ...
             - 모든 객체의 맨 마지막 속성으로 __proto__ 생성됨
-               __proto__ 은 prototype이라는 객체를 가짐
+              (생성자 함수 자체는 __proto__ 없음, 각 생성자 함수 constructor에 생김, Object constructor는 없음)
+               __proto__ 은 다른 constructor에 referencing함
                prototype chain을 통해 reference 지속 발생
             - another은 특정 객체 내에서만 사용 가능 / prototype chain을 통해 여러 객체 referencing
 */

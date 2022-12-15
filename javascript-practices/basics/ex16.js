@@ -56,6 +56,7 @@ f4(function() {
     console.log("22!!!!!"); 
 })(); // 마지막 ()로 인해 실행됨
 
+// 예시4
 console.log("== 익명(anonymous) 함수의 또 다른 예시4 ============================");
 var s = (function(a, b) {
     var m = 10;
@@ -71,6 +72,8 @@ console.log(s);
 // 비동기로 인해 예시1 맨마직막 실행됨
 
 // ========================================================================================
+// ========================================================================================
+
 
 // 가변 파라미터
 
@@ -82,6 +85,7 @@ var f4 = function(a, b, c) {
 }
 f4(10, 20, 30, 40, 50, 60);
 
+
 // 2. 예시
 // arguments는 function의 내장 객체
 // foreach는 Array.prototype.* 이다.
@@ -92,20 +96,26 @@ var sum = function() {
 
     console.log(arguments instanceof Array, arguments instanceof Object, arguments.length);
 
-    for (let i = 0; i < arguments.length; i++) {
-        s += arguments[i];
-    }
+    // for (let i = 0; i < arguments.length; i++) {
+    //     s += arguments[i];
+    // }
 
-    // Error
-    // arguments의 __proto__는 Object.prototype에 chain 되어 있기 때문에 오류!
-    // arguments.forEach(function(e) {
-    //    s += e;
-    // });
+    // // Error
+    // // arguments의 __proto__는 Object.prototype에 chain 되어 있기 때문에 오류!
+    // // arguments.forEach(function(e) {
+    // //    s += e;
+    // // });
+
+    // arguments는 배열X + 요즘 스타일 forEach 적용
+    Array.prototype.forEach.call(arguments, function(e) {
+        s += e;
+    })
 
     return s;
 }
 
-console.log(sum(1));
-console.log(sum(1,2));
-console.log(sum(1,2,3,4));
-console.log(sum(1,2,3,4,5,6));
+// console.log(sum(1));
+// console.log(sum(1,2));
+// console.log(sum(1,2,3,4));
+// console.log(sum(1,2,3,4,5,6));
+
