@@ -8,11 +8,14 @@
 		setTimeout(function(){
 			
 			var h3Element = document.createElement("h3");
+			
 			// text는 TextNode에 저장되는데 그래서 text 넣기 전 TextNode 만들고 text를 넣어야 한다
 			var h3TextNode = document.createTextNode("Hello DOM");  
 			h3Element.append(h3TextNode);
 			
-			document.body.appendChild(h3Element);
+			// 대부분의 html에  head와 body가 있어 흔히 이렇게 사용함. head, body에 내용이 없어도 쓰기
+			document.body.appendChild(h3Element); 
+			
 		}, 2000);
 	}
 </script>
