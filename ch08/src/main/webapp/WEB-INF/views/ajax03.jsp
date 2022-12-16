@@ -11,17 +11,29 @@
 <script>
 // console.log($().jquery);
 $(function(){
+	// 폼에서 객체로 받기
+	var formData = {
+			name:"맹구",
+			email:"menggu@gmail.com",
+			password:"1234",
+			gender:"male"
+	}
+	
 	$("#btn-getdata").click(function(){
 		$.ajax({
-			url: "${pageContext.request.contextPath }/api/01", // get방식으로 할 때 뒤에 ? 또는 $.param(formData)
+			url: "${pageContext.request.contextPath }/api/03",
 			async: true,   // 비동기할거임
-			type: "get",   // GET / POST
+			type: "post",   // GET / POST
 			dataType: "json",
+			contentType: "application/json",  // 일반 폼에서 받는 방식
+			data: JSON.stringify(formData),
 			success: function(response){
 				// console.log(response.name + " : " + response.age);
 				var htmls = "";
 				htmls += ("<h1>" + response.name + "</h1>")
-				htmls += ("<h2>" + response.age + "</h2>")
+				htmls += ("<h2>" + response.email + "</h2>")
+				htmls += ("<h2>" + response.password + "</h2>")
+				htmls += ("<h2>" + response.gender + "</h2>")
 				$("#data").html(htmls);
 			},
 			error: function(xhr, status, error){
@@ -34,9 +46,9 @@ $(function(){
 </script>
 </head>
 <body>
-	<h1>Ajax Test01</h1>
+	<h1>Ajax Test03</h1>
 	
-	<button id="btn-getdata">데이터 가져오기</button>
+	<button id="btn-getdata">데이터 보내기</button>
 	<div id="data">
 	</div>
 </body>
