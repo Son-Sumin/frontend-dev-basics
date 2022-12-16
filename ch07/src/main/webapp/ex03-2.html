@@ -4,20 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-simple.js"></script>
 <script>
-$(function(){
-	var $obj = $(".par");
-	$obj.click(function(){
-		console.log("clicked:" + this);
-	});
+console.log(jQuery().jquery, $().jquery);
 
+$(function() {
+	// console.log("dom load!");
+	var $obj = $(".par");
+	console.log($obj);
+	
+	$obj.click(function(){
+		console.log("clicked:" + this);  // 여기서 this는 object 아님. .par임
+	});
+	
 	setTimeout(function(){
 		$obj.css('color', 'red');
 	}, 2000);
-
-	setTimeout(function(){
-		$("p").css('font-weight', 'bold');
-	}, 4000);
-
+	
 });
 </script>
 </head>

@@ -5,9 +5,10 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function() {
-	var $obj = $(".par");
+	var $obj = $(".par");  // 클래스 선택자
+	
 	$obj.click(function(){
-		console.log("clicked:" + this);
+		console.log("clicked:" + this);  // 여기서 this는 object 아님. .par임
 	});
 	
 	setTimeout(function(){
