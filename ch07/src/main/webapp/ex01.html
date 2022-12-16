@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- 압축버젼(애플리케이션 서버 호스팅): compressed, production -->
+<!-- <script src='jquery/jquery-3.6.0.min.js'></script> -->
+
+<!-- 압축버젼(CDN): compressed, production -->
+<!-- script src='https://code.jquery.com/jquery-3.6.0.min.js'></script-->
+
+<!-- 소스버젼(CDN): uncompressed, development -->
+<script src='https://code.jquery.com/jquery-3.6.0.js'></script>
+<script>
+
+// 버전 확인
+// $는 jQuery함수의 alias
+console.log(jQuery().jquery, $().jquery);
+
+// 관례적으로 jQuery가 리턴한 함수라는 것을 알려주기 위해 $obj1 이렇게 씀
+//jQuery Object
+var $obj1 = jQuery();
+console.log(typeof(jQuery), typeof($obj1), $obj1 instanceof Array, $obj1 instanceof Object);
+
+</script>
+</head>
+
+<body>
+	<h1>jQuery 로딩</h1>
+</body>
+</html>
+ 
