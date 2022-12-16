@@ -5,7 +5,15 @@
 <script type="text/javascript" src="./jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 $(function() {
-	setTimeout(function(){
+	setTimeout(function(){  // jquery는 . 하나 실행 리턴, 그 다음 . 실행 후 리턴한다. 근데 travese API는 예외, 호출한 함수를 의미함
+		$("h2, p")
+		.wrapAll("<div>")
+		.parent()				// travese API; 호출한 함수의 부모 -> wrapping 해주는 div
+		.css({
+			border: "1px solid #ccc",
+			width: "200px",
+			padding: "10px"
+		});
 	}, 2000);
 });  
 </script>

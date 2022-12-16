@@ -6,6 +6,7 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		$("#p1").insertBefore("#h2");  // p1을 h2 앞에
 	}, 1000);
 });
 </script>
@@ -13,7 +14,7 @@ $(function(){
 <body>
 	<h1>DOM 조작 API - insertBefore()</h1>
 	
-	<p id="p1">내용입니다.</p>
 	<h2 id="h2">제목입니다.</h2>
+	<p id="p1">내용입니다.</p>
 </body>
 </html>

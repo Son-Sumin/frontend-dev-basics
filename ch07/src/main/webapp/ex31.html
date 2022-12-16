@@ -6,6 +6,7 @@
 <script type="text/javascript">
 $(function() {
 	setTimeout(function(){
+		$("ul li:nth-child(3), ul li:nth-child(5)").remove();  // child; css
 	}, 2000);
 });  
 </script>
@@ -14,9 +15,9 @@ $(function() {
 	<h1>DOM 조작 API - replaceWith()</h1>
 
 	<ul>
-		<li>첫번째 아이템입니다.</li>
+		<li>첫번째 아이템입니다.</li>  <!-- index 1~6 -->
 		<li>두번째 아이템입니다.</li>
-		<li>삭제할  아이템입니다.</li>
+		<li>삭제할 아이템입니다.</li>
 		<li>네번째 아이템입니다.</li>
 		<li>삭제할 아이템입니다.</li>
 		<li>다섯 번째 아이템입니다.</li>

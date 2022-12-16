@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>sample1</title>
-<script type="text/javascript" src="./jquery/jquery-1.9.0.js"></script>
+<script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script type="text/javascript">
 
 var images = [ 
@@ -18,9 +18,12 @@ var images = [
 
 $(function(){
 
-	$("button").click(function(){
+	$("button").click(function(){  // 0 < Math.random() <1
 		// 랜덤 변수 
-		var result = Math.floor( Math.random() * (images.length-1)  ) + 1;
+		var index = Math.floor( Math.random() * images.length);
+		 
+		var data = images[index].split(":");
+		$("p img").attr("src", "images/" + data[1]).attr("alt", data[0]);  // alt; 해당 이미지를 위한 대체 텍스트를 명시
 	});
 	
 });
