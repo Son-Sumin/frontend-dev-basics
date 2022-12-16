@@ -4,13 +4,21 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
+// console에 있는 DOM 확인하기
 $(function(){
 	setTimeout(function(){
+		$("#p1").text("1.안녕하세요");                     // 파라미터가 있으면 READ
+		$("#p2").text("2.<strong>안녕하세요</strong>");    // 문자 그대로 들어감(엘립먼트 포함)
+		console.log($("#p3").text());
+		console.log($("#p4").text());                   // 파라미터가 없으면 WRITE
 	}, 1000);
 });
 </script>
 </head>
 <body>
+	<p>
+		10&lt;a&gt;20  <!-- 10<a>20 출력하기 위해 HTML의 escape, 본래대로 적으면 <a> 태그로 인식 -->
+	</p>
 	<h1>DOM 조작 API - text()</h1>
 
 	<p id="p1">...</p>
@@ -21,7 +29,7 @@ $(function(){
 		HTML의 escape 문자들
 		& -> &amp;
 		space -> &nbsp;
-		< -> &lth;
+		< -> &lt;
 		> -> &gt;
 		' -> &quot;
 	-->

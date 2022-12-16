@@ -6,6 +6,9 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		setTimeout(function(){  // * li 밑에 엘리먼트만!!
+			$("li *").css("color", "green");
+		}, 1000);
 	}, 1000);
 });
 </script>

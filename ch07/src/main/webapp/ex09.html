@@ -5,7 +5,9 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function(){  // 자식 : '>' 활용
+		$("li > strong").css("font-weight", "normal");  // li 밑에 바로 아래 엘리먼트
+		$("li > div > strong").css("color", "blue");
 	}, 1000);
 });
 </script>

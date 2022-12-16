@@ -6,6 +6,8 @@
 <script>
 $(function(){
 	setTimeout(function(){
+		$("#second + li").css('color', 'red');  // #second의 아래 li
+		$("#second + li + li").css('color', 'blue');  // #second의 아래 li, 또 아래 li
 	}, 1000);
 });
 </script>

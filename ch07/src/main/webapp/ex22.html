@@ -5,7 +5,9 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){
+	setTimeout(function(){  // prepend, append는 안의 내용이 바뀌는 것이고, bef, af는 그 엘레먼트 앞뒤에 넣기
+		var htmls = "<h1>타이틀</h1>";
+		$("#p1").before(htmls);
 	}, 1000);
 });
 </script>

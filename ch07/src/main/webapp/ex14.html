@@ -4,8 +4,11 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
+// ex12.html 참고
 $(function(){
 	setTimeout(function(){
+		$('li:first').css('color', 'red');  // jQuery에서만 제공하는 필터, css에서는 사용하면 안됨
+		$('li:last').css('color', 'blue');
 	}, 1000);
 });
 </script>

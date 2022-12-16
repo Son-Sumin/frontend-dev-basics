@@ -5,8 +5,18 @@
 <script type="text/javascript" src="jquery/jquery-3.6.0.js"></script>
 <script>
 $(function(){
-	setTimeout(function(){	
-	}, 1000);
+	setTimeout(function(){
+		// chain 활용
+		$('.red strong')
+			.css('color', 'red')
+			.css('font-weight', 'normal');
+		
+		// 한 번에 줄때 property는 카멜기법 사용
+		$('.blue strong').css({
+			color: 'blue',
+			fontWeight: 'normal'
+		});
+		}, 1000);
 });
 </script>
 </head>
