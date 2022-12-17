@@ -107,7 +107,8 @@ var sum = function() {
     // //    s += e;
     // // });
 
-    // arguments는 배열X + 요즘 스타일 forEach 적용
+    // arguments는 배열X -> Array.prototype.forEach 사용 불가
+    // 요즘 스타일 forEach 적용하기 위해 Function.prototype.call 사용
     Array.prototype.forEach.call(arguments, function(e) {
         s += e;
     })
