@@ -14,7 +14,7 @@
  비동기적으로 JS와 Xml을 이용함
  Json으로 데이터를 전송하기에 Xml 잘 사용 안함
  
- 서버와 통신하기 위해 XMLHttpRequest(XHR) 객체 사용
+ JS 코드를 통헤 서버와 통신하기 위해 XMLHttpRequest(XHR) 객체 사용
  XHR은 웹브라우저가 계속 서버와 통신할 수 있도록 도와줌
  XHR은 document.addEventListener와 비슷한 역할 수행함(event 기반으로 실행됨)
  */
@@ -29,7 +29,7 @@ $(function(){
 				// console.log(response.name + " : " + response.age);
 				var htmls = "";
 				htmls += ("<h1>" + response.name + "</h1>")
-				htmls += ("<h2>" + response.age + "</h2>")
+				htmls += ("<h2>" + response.age  + "</h2>")
 				$("#data").html(htmls);
 			},
 			error: function(xhr, status, error){  // xhr: XmlHttpRequest

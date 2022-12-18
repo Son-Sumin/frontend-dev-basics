@@ -57,7 +57,7 @@ console.log(o4);
 
 
 // XmlHttpRequest 객체를 사용하여
-// 통신(AJAX) 에서 데이터 교환 포맷으로 JSON을 사용한다. (property에도 "" 붙여야함)
+// 통신(AJAX)에서 데이터 교환 포맷으로 보통 JSON을 사용한다. (property에도 "" 붙여야함)
 // JSON 내장 객체는 JavaScript 객체와 JSON 문자열 간의 상호 변환을 수행해주는 두 개의 메서드를 제공
 //  - parse() : JSON 문자열을 인자로 받고 결과값으로 JavaScript 객체
 //  - stringify() : JavaScript 객체를 인자로 받고 JSON 문자열을 반환

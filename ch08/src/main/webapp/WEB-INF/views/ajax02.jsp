@@ -26,14 +26,14 @@ $(function(){
 			type: "post",   // GET / POST
 			dataType: "json",
 			contentType: "application/x-www-form-urlencoded",  // 일반 폼에서 받는 방식
-			data: $.param(formData),  // similar to toString()
+			data: $.param(formData),  // param; similar to toString()
 			success: function(response){
 				// console.log(response.name + " : " + response.age);
 				var htmls = "";
-				htmls += ("<h1>" + response.name + "</h1>")
-				htmls += ("<h2>" + response.email + "</h2>")
+				htmls += ("<h1>" + response.name     + "</h1>")
+				htmls += ("<h2>" + response.email    + "</h2>")
 				htmls += ("<h2>" + response.password + "</h2>")
-				htmls += ("<h2>" + response.gender + "</h2>")
+				htmls += ("<h2>" + response.gender   + "</h2>")
 				$("#data").html(htmls);
 			},
 			error: function(xhr, status, error){

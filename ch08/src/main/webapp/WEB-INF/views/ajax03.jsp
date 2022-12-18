@@ -7,6 +7,9 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<!-- 참고; ./javascript-practices/basics/
+     ex06(object 타입 객체).js
+     ex14(URL 다루기).js -->
 <script src="${pageContext.request.contextPath }/assets/js/jquery/jquery-3.6.0.js"></script>
 <script>
 // console.log($().jquery);
@@ -26,14 +29,14 @@ $(function(){
 			type: "post",   // GET / POST
 			dataType: "json",
 			contentType: "application/json",  // 일반 폼에서 받는 방식
-			data: JSON.stringify(formData),
+			data: JSON.stringify(formData),   // stringify(): JS 객체를 인자로 받고 JSON 문자열을 반환
 			success: function(response){
 				// console.log(response.name + " : " + response.age);
 				var htmls = "";
-				htmls += ("<h1>" + response.name + "</h1>")
-				htmls += ("<h2>" + response.email + "</h2>")
+				htmls += ("<h1>" + response.name     + "</h1>")
+				htmls += ("<h2>" + response.email    + "</h2>")
 				htmls += ("<h2>" + response.password + "</h2>")
-				htmls += ("<h2>" + response.gender + "</h2>")
+				htmls += ("<h2>" + response.gender   + "</h2>")
 				$("#data").html(htmls);
 			},
 			error: function(xhr, status, error){

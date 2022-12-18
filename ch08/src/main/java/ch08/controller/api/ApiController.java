@@ -39,4 +39,11 @@ public class ApiController {
 		vo.setNo(10L);
 		return vo;
 	}
+	/* @RequestBody: HTTP Body 안에 JSON을 vo에 mapping
+	   @ResponseBody: vo 객체를 JSON으로 바꿔 HTTP Body 안에 담음
+	   HTTP Body 부분에 들어가는 것들 중 가장 많이 쓰이는 형식이 JSON 형식
+	   JSON(JavaScript Object Notation):
+			JS 객체 리터럴(literal) 문법으로, 구조화된 데이터를 표현하기 위한 문자 기반의 표준 포맷
+	   XML형식에 비해 필요한 구조가 적고 key:value로 보통 존재함
+	 */
 }
