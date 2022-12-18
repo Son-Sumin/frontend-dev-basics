@@ -16,5 +16,5 @@
 
 ### javascript-practices: javascript 기본개념   
 
-#### 순서
+#### ** 순서
 ch02 → ch03 → ch04 → ch05 → javascript-practices → ch06 → ch07 → ch08
