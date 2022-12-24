@@ -1,6 +1,7 @@
 ## frontend-dev-basics  
    
-### ch02: HTML&CSS 기초  
+### [ch02: HTML&CSS 기초][ch02: HTML&CSS 기초link]  
+[ch02: HTML&CSS 기초link]: https://github.com/Son-Sumin/frontend-dev-basics/tree/master/ch02/src/main/webapp
 
 ### ch03: CSS Box Model
 
